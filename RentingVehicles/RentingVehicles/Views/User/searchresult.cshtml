@@ -1,0 +1,82 @@
+﻿@model IEnumerable<RentingVehicles.Models.AddVehicleModel>
+
+@{
+    ViewBag.Title = "searchresult";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h2>searchresult</h2>
+
+<p>
+    @Html.ActionLink("AddVehicle", "User")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehiclePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleImageAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleMilage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+      
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehiclePrice)
+        </td>
+       
+        <td>
+            <img height="100px" width="100px" src=@item.VehicleImageAddress />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleMilage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.ActionLink("Send Message", "messages", "User", new { vid=item.VehicleID },null)
+        </td>
+        <td>
+            @Html.ActionLink("Add Wishlist", "wishlist", "User", new { vid = item.VehicleID }, null)
+        </td>
+
+    
+    </tr>
+
+}
+   @Html.ActionLink("BACK","SearchVehicle","User")
+
+</table>

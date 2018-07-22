@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+
+
+    
+
+</head>
+<body>
+    <div align="center">
+           <h1> WELCOME TO RentingVehicles Website To Book Your Vehicle.....
+               </h1>
+        <table class="tbldesign">
+            <tr>
+                <td colspan="12">
+                    
+                
+                  
+                </td>
+            </tr>
+            <tr>
+               <td> @Html.ActionLink("AddVehiclePage", "AddVehicle", "User")</td>
+                <td> @Html.ActionLink("ViewMyVehiclePage", "ViewMyVehicle", "User")</td>
+                <td> @Html.ActionLink("SearchVehicle", "SearchVehicle", "User")</td>
+                <td> @Html.ActionLink("messages", "messages", "User")</td>
+                <td> @Html.ActionLink("Viewwishlist", "ViewMyWishlist", "User")</td>
+                <td> @Html.ActionLink("Logout", "Logout", "User")</td>
+            </tr>
+            <tr>
+                <td colspan="12">
+                    @RenderBody()
+                </td>
+            </tr>
+            <tr>
+                
+                <td colspan="12">
+                   
+                 
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

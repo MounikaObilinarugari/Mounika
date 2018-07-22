@@ -1,0 +1,32 @@
+﻿
+@{
+   // Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+        <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div style="float:left">
+        <a href='@Url.Action("Login", "User")'>
+            
+            <img src="~/images/login-button-png-hi[1].png" height="50" width="250" />
+        </a>
+    </div>
+        <br />
+    <div style="float:right">
+        <a href='@Url.Action("NewUser", "User")'>
+            <img src="~/images/signin-png-hi[1].png" height="50" width="250"/>
+        </a>
+    </div>
+    <h1>
+        Welcome to Online Renting Vehicles..
+    </h1>
+</body>
+</html>

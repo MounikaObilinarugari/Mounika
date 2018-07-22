@@ -1,0 +1,94 @@
+﻿@model IEnumerable<RentingVehicles.Models.AddVehicleModel>
+
+@{
+    ViewBag.Title = "ViewMyWishlist";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h2>ViewMyWishlist</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehiclePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleAddDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleAddBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleImageAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleMilage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehiclePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleAddDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleAddBy)
+        </td>
+        <td>
+            <img height="100px" width="100px" src=@item.VehicleImageAddress />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleMilage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <th>
+            @Html.ActionLink("Owner details", "viewdetails", "User",new {uid=item.UserID },null)
+        </th>
+        <th>
+            @Html.ActionLink("Remove", "Removeitem", "User", new { vid = item.VehicleID }, null)
+        </th>
+       @ViewBag.msg
+    </tr>
+}
+
+</table>

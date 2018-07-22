@@ -1,0 +1,29 @@
+﻿body {
+    background-image:url('../images/980c4a0fa44ae3fcea3ae905870f4e1b[1].jpg');
+       
+}
+.tbldesign
+{
+    width:1000px;
+    height:auto;
+    font-size:20px;
+    border:solid;
+    border-width:2px;
+    border-color:black;
+    border-bottom-style:double;
+}
+.txtdesign{
+    width:200px;
+    font-size:20px;
+    margin:10px;
+    border-color:red;
+    border-width:thick;
+}
+.btndesign{
+    width:150px;
+    font-size:20px;
+    margin:10px;
+    color:brown;
+}
+
+
