@@ -213,7 +213,6 @@
     <Compile Include="Models\NewUserModel.cs" />
     <Compile Include="Models\SearchModel.cs" />
     <Compile Include="Models\VehiclesRentModel.cs" />
-    <Compile Include="Models\wishlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
